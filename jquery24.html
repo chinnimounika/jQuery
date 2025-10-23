@@ -1,0 +1,36 @@
+<!---Selecting Multiple Values-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            p {
+                color:red;
+                margin:4px;
+            }
+            b {
+                color:blue;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        </head>
+        <body>
+            <p></p>
+            <select id="multiple" multiple="multiple">
+                <option selected="selected">Multiple</option>
+                <option>Multiple2</option>
+                <option>Multiple3</option>
+            </select>
+            <script>
+                function displayVals(){
+                    var multipleValues=$("#multiple").val()||[];
+                    $("p").html("<b>Multiple:</b>"+multipleValues.join(","));
+                }
+                $("select").change(displayVals);
+                displayVals();
+            </script>
+        </body>
+        </html>
+       

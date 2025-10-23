@@ -1,0 +1,28 @@
+<!---unbind()-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("h3").bind("mouseover",function(){
+                $(this).css({"background-color":"pink","font-size":"25px"}).text("Hovered");
+            });
+            $("#b3").click(function(){
+                $("h3").unbind("mouseover");
+            });
+        });
+        </script>
+        </head>
+        <body>
+            <h2>It is an example of using the jQuery unbind() method.</h2>
+            <p>Move the cursor the below heading to attach the mouse over event.</p>
+            <h3>Hover me</h3>
+            <button id="b3">Remove Event</button>
+            <h3>Hover me</h3>
+        </body>
+       </html>
+   
