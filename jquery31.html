@@ -1,0 +1,25 @@
+<!---focus()-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <style>
+            span {
+                display:none;
+            }
+        </style>
+        </head>
+        <body>
+            <p><input type="text"><span>Focus Starts.. Write Your name.</span></p>
+            <p><input type="password"><span>Focus Starts..Write your password.</span></p>
+        <script>
+            $("input").focus(function(){
+                $(this).next("span").css("display","inline").fadeOut(2000);
+        });
+        </script>
+        </body>
+        </html>
+   
